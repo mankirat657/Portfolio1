@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", system-ui;
+    overflow-x: hidden;
+    cursor: none;
+}
+.normal{
+    line-height: 1;
+}
+.movingBox {
+   transition: .3s ease;
+  }
+  
+.mainbg {
+    transition: background-color 0.8s ease-in-out;
+  }
+  
+#mousefollower{
+    transition: .1s ease;
+    pointer-events: none;
+    z-index: 800;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.animeimg{
+    animation:rotation 10s infinite linear;
+}
+@keyframes rotation {
+        0%{
+            rotate: 0deg;
+        }
+        100%{
+            rotate: 360deg;
+        }
+
+}
+/* From Uiverse.io by OMPRABHU8125 */ 
+.loader {
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .react-star {
+    position: relative;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    animation: rotate 3s infinite;
+  }
+  
+  .nucleus {
+    position: absolute;
+  
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(#0738e8, cyan);
+    height: 2rem;
+    width: 2rem;
+    animation: rotate 1s linear infinite;
+  }
+  
+  .electron {
+    position: absolute;
+    width: 15rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 0.3rem solid #00ffff;
+    animation: revolve 1s linear infinite;
+  }
+  
+  .electron1::before,
+  .electron2::before,
+  .electron3::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: cyan;
+    border-radius: 50%;
+    animation: moveElectron 1s infinite;
+  }
+  .electron2 {
+    transform: rotate(60deg);
+    animation-delay: -0.66s;
+  }
+  .electron2::before {
+    animation-delay: -0.66s;
+  }
+  
+  .electron3 {
+    transform: rotate(-60deg);
+  }
+  .myarr{
+    width: 2vw;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) scale3d(1.1, 1.1, 0);
+    }
+  }
+  
+  @keyframes revolve {
+    0% {
+      border-color: #00ffff9c;
+      border-right: transparent;
+    }
+    25% {
+      border-color: #00ffff9c;
+      border-bottom-color: transparent;
+    }
+    50% {
+      border-color: #00ffff9c;
+      border-left-color: transparent;
+    }
+    75% {
+      border-color: #00ffff9c;
+      border-top-color: transparent;
+    }
+    100% {
+      border-color: #00ffff9c;
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes moveElectron {
+    0% {
+      top: 60%;
+      left: 100%;
+    }
+    25% {
+      top: 100%;
+      left: 60%;
+    }
+    50% {
+      top: 60%;
+      left: 0%;
+    }
+    75% {
+      top: 0%;
+      left: 60%;
+    }
+    100% {
+      top: 60%;
+      left: 100%;
+    }
+  }
+  @media screen and (max-width: 700px){
+      .mycircle{
+          width: 4vh;
+          height: 4vh;
+      }
+      .anitext{
+          font-size: 14px;
+      }
+      #mousefollower{
+        display: none;
+      }
+      .queritext{
+        font-size: 14px;
+      }
+      
+      .btnner{
+        padding-top: 2vw;
+      }
+      .banner-item h1{
+        font-size: 15vw;
+      }
+      .textersttingh{
+        font-size: 35px;
+      }
+      .movingBox{
+        display: none;
+      }
+      .responsivesec{
+        justify-content: center;
+      }
+      .textresponsive{
+        text-align: start;
+      }
+  }
+  @media screen and (max-width: 600px){
+      .resheight{
+        height: 80vh;
+      }
+      .teabutton{
+        font-size: 15px;
+        padding-top: 2.5px;
+        padding-right: 5px;
+        padding-left: 8px;
+        padding-bottom: 2.5px;
+      }
+      .aboutresp{
+        font-size: 31px !important;
+      }
+  }
+  @media screen and (max-width: 450px){
+    .aboutresp{
+      font-size: 28px !important;
+    }
+    .animtext{
+      font-size: 9vw !important;
+    }
+    .project{
+      height: 70vh !important;
+      width: 85vw !important;
+    }
+    .myarr{
+      width: 4vw;
+    }
+  }
+  @media screen and (max-width: 400px){
+    .aboutresp{
+      font-size: 20px !important;
+    }  
+    .resheight{
+      height: 70vh;
+    }  
+    .teabutton{
+      font-size: 13px;
+      padding-top: 2.5px;
+      padding-right: 5px;
+      padding-left: 8px;
+      padding-bottom: 2.5px;
+    }
+ 
+  }
